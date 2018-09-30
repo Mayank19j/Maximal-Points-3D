@@ -1,5 +1,5 @@
 #!/bin/sh
 
-make clean
-make all
-./maximal $1 $2
+g++ maximal.cpp -o maxima
+./maxima < $1 > $2
+
