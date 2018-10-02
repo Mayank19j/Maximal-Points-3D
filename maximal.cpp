@@ -1,16 +1,16 @@
 #include<iostream>
 
 using namespace std;
-int n,m;	// No. of points in 3d
+int n,m;	// No. of points in 3d , in input and in output
 
-struct point
+struct point	//representation of a point
 {
-	int x,y,z,index,max;
+	int x,y,z,index,max;	//max is a flag to check maximality
 }*p;
 
 void max_find()
 {
-	int i,j,equity;
+	int i,j,equity;	//equity is for those cases having more than 1 point with same x co-ordinate
 	for(i=0;i<n;i++)
 	{
 		if(p[i].max==0) continue;
